@@ -9,7 +9,7 @@ Intended GitHub Pages root: https://happyxray618.github.io/nobody-workshop-priva
 - Work Hours & Pay Calculator: https://happyxray618.github.io/nobody-workshop-privacy/workhours/privacy-policy.html
 - Product Photo Resizer: https://happyxray618.github.io/nobody-workshop-privacy/product-photo-resizer/privacy-policy.html
 
-These are intended addresses; deployment is only complete after public HTTP access has been verified.
+Published on October 10, 2026. GitHub Pages serves the `main` branch root with enforced HTTPS. Homepage, both app policies and styles were verified with anonymous HTTP requests. Work Hours Android configuration uses the verified policy URL. Review actual app releases and SDK/privacy settings before completing Play Data Safety.
 
 ## Deploy
 
