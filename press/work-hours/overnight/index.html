@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Overnight Shift Hours Calculator — Work Hours by NobodyWorkshop</title>
+<meta name="description" content="Calculate paid hours for a shift crossing midnight, subtract an unpaid break, and see hours and minutes. Free browser calculator, no account.">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f5f2;color:#24352d;font:18px/1.6 system-ui,sans-serif}main{max-width:760px;margin:auto;padding:36px 22px}h1{font-size:clamp(30px,6vw,43px);line-height:1.15}h2{font-size:24px}a{color:#235c45}section{background:white;padding:24px;border-radius:16px;margin:25px 0;border:1px solid #d4ddd5}.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}label{display:block;font-weight:650}input{display:block;width:100%;font:inherit;padding:12px;border:1px solid #789080;border-radius:8px;margin-top:7px}button,.cta{display:inline-block;font:inherit;background:#28563f;color:white;border:0;border-radius:9px;padding:12px 20px;cursor:pointer;text-decoration:none;margin:18px 0 0}.secondary{background:#e6eee8;color:#24352d;margin-right:8px}.big{font-size:34px;font-weight:bold;margin:8px 0}#error{color:#8d2424;font-weight:650}small,.muted{font-size:15px;color:#4c6053}dt{font-weight:650}dd{margin:0 0 10px}footer{font-size:14px;border-top:1px solid #c9d1ca;margin-top:32px;padding-top:20px}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b26824;outline-offset:4px}@media(max-width:480px){.fields{grid-template-columns:1fr}section{padding:18px}main{padding:25px 16px}}
+</style></head><body><main>
+<p class="muted">A free browser tool from the independent developer of Work Hours</p>
+<h1>How many hours was that overnight shift?</h1>
+<p>Enter the clock times and subtract your unpaid break. If the end is earlier than the start, it counts as the next day.</p>
+<section aria-label="Shift calculator"><form id="shift-form">
+<div class="fields"><label>Shift start<input id="start" type="time" required value="22:00"></label><label>Shift end<input id="end" type="time" required value="06:00"></label></div>
+<label style="margin-top:18px">Unpaid break (minutes)<input id="break" type="number" min="0" max="720" step="1" required value="30"></label>
+<button type="submit">Calculate hours</button>
+<div><button class="secondary" id="example" type="button">Example: 22:00–06:00</button><button class="secondary" id="reset" type="button">Reset</button></div>
+</form><div id="error" role="alert"></div><div id="result" role="status" aria-live="polite"><p class="muted">The example is ready. Choose Calculate hours to see the breakdown.</p></div>
+</section>
+<h2>Example: 10 pm to 6 am, with a 30-minute break</h2>
+<p>The shift spans 8 hours. Subtract 30 minutes to get <strong>7 hours 30 minutes</strong> of paid time, or <strong>7.50 decimal hours</strong>. Thirty minutes is half an hour, not 0.30 hours.</p>
+<h2>Need to keep a shift history?</h2>
+<p><strong>Work Hours &amp; Pay Calculator</strong> for Android saves shifts on your device and estimates regular and per-shift overtime pay. It supports 13 languages and offline calculations.</p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.nobodyworkshop.workhours&amp;referrer=utm_source%3Dovernight_calculator%26utm_medium%3Dorganic_tool">Get Work Hours on Google Play</a>
+<p class="muted">The Android app is free with ads. Pay estimates are before taxes and deductions. Overtime uses your settings per shift, not accumulated weekly legal rules. No cloud sync or export; uninstalling removes local records.</p>
+<h2>What this browser tool does</h2>
+<p>It calculates clock-time hours for one shift under 24 hours. Equal start and end times mean zero hours, not a full day. Breaks must be whole minutes from 0 to 720 and shorter than a nonzero shift. It does not handle dates, daylight-saving changes, multiple-day shifts, wages or labour-law entitlements.</p>
+<p>Your entries are processed in this page. This tool has no analytics, ads, account, storage or third-party scripts; it sends no form submissions. Opening Google Play or email leaves this page. The hosting provider may receive normal page-request metadata.</p>
+<p>Was any part confusing? <a href="mailto:service@gamebox.wiki?subject=Work%20Hours%20browser%20calculator%20feedback">Send honest feedback to the developer</a>. No rating or personal work details are needed.</p>
+<noscript><p>JavaScript is needed for the interactive calculator. You can still use the worked example above.</p></noscript>
+<footer>Built by NobodyWorkshop with AI-assisted coding. This is a standalone hours-only companion tool, not the full Android app. Android product details checked on 15 November 2026. Browser use is not an app install.</footer>
+<script src="calculator.js"></script></main></body></html>
