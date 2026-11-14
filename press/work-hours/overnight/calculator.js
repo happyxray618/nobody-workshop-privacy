@@ -22,8 +22,13 @@ if (typeof document!=='undefined') {
       const r=shiftHours(el('start').value,el('end').value,Number(raw));
       el('error').textContent='';
       el('result').replaceChildren();
-      const title=document.createElement('p');title.className='big';title.textContent=format(r.paid)+' paid';el('result').append(title);
-      const detail=document.createElement('p');detail.textContent=format(r.duration)+' elapsed − '+r.breakMinutes+' min unpaid break = '+(r.paid/60).toFixed(2)+' decimal hours.';el('result').append(detail);
+      const grid=document.createElement('div');grid.className='numbers';
+      for(const [label,value] of [['Paid hours & minutes',format(r.paid)],['Paid decimal hours',(r.paid/60).toFixed(2)]]) {
+        const card=document.createElement('div');const heading=document.createElement('h3');heading.textContent=label;
+        const valueText=document.createElement('p');valueText.className='big';valueText.textContent=value;card.append(heading,valueText);grid.append(card);
+      }
+      el('result').append(grid);
+      const detail=document.createElement('p');detail.textContent=format(r.duration)+' elapsed − '+r.breakMinutes+' min unpaid break.';el('result').append(detail);
       const note=document.createElement('p');note.className='muted';note.textContent=r.crossesMidnight?'End time is treated as the next day.':(r.duration===0?'Equal times represent zero hours, not 24 hours.':'Start and end are on the same day.');el('result').append(note);
     } catch(error) {el('result').replaceChildren();el('error').textContent=error.message;}
   }
