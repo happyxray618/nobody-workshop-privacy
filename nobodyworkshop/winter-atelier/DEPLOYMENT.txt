@@ -1,0 +1,4 @@
+Standalone Winter Atelier website
+Canonical: https://gamebox.wiki/nobodyworkshop/winter-atelier/
+Serve index.html for directory requests. All product assets are included.
+To move domains, rerun the export command with the new --site-url; no framework is required.
