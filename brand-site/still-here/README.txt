@@ -1,0 +1,1 @@
+Independent static product folder. Local assets are self-contained. Set site.config.json siteUrl and regenerate canonical URLs before moving hosts. Navigation to ../ is an optional brand link. No server or database required.
