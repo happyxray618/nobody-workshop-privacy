@@ -1,0 +1,41 @@
+.product-guide {
+  margin-block: 54px;
+}
+.product-guide h2,
+.rush-screens h2 {
+  margin-bottom: 18px;
+}
+.product-guide ol {
+  display: grid;
+  gap: 12px;
+  padding-inline-start: 24px;
+  max-width: 68ch;
+}
+.rush-screens {
+  margin-block: 54px;
+}
+.rush-screens-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.rush-screens-grid figure {
+  margin: 0;
+}
+.rush-screens-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+.rush-screens-grid figcaption {
+  margin-top: 8px;
+}
+@media (max-width: 760px) {
+  .product-hero h1 { overflow-wrap: anywhere; }
+  .product-art img { height: auto; }
+  .rush-screens-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
